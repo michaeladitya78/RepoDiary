@@ -1,0 +1,6 @@
+# Ignore build directories and dependencies for Semgrep
+.next/
+node_modules/
+dist/
+out/
+build/
