@@ -86,10 +86,7 @@ export default function DashboardClient({ profile }: { profile: Profile }) {
       <nav className="border-b border-slate-800/60 px-4 py-3.5">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-green-500 rounded-lg flex items-center justify-center">
-              <span className="text-xs font-bold text-white">RD</span>
-            </div>
-            <span className="font-bold text-white tracking-tight">Repo Diary</span>
+            <Image src="/logo.svg" alt="RepoDiary" width={130} height={32} className="h-7 w-auto" priority />
           </Link>
 
           <div className="flex items-center gap-3">

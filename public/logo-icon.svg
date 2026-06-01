@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Vertical bar -->
+  <rect x="8" y="6" width="7" height="48" rx="3.5" fill="#7C3AED"/>
+  <!-- Top horizontal -->
+  <rect x="8" y="6" width="24" height="7" rx="3.5" fill="#7C3AED"/>
+  <!-- Middle horizontal -->
+  <rect x="8" y="27" width="19" height="7" rx="3.5" fill="#7C3AED"/>
+  <!-- D arc outer -->
+  <path d="M30 6 C50 6, 57 24, 52 40 C48 52, 38 58, 30 58 L30 51 C38 51, 46 45, 47 34 C48 22, 42 13, 30 13 Z" fill="#7C3AED"/>
+  <!-- D arc inner cutout -->
+  <path d="M30 13 C40 13, 47 20, 47 34 C47 44, 40 51, 30 51 L30 34 L15 34 L15 27 L30 27 Z" fill="white"/>
+  <!-- Teal node dot -->
+  <circle cx="18" cy="58" r="6" fill="#06B6D4"/>
+  <!-- Stem to dot -->
+  <rect x="15" y="51" width="6" height="10" rx="3" fill="#7C3AED"/>
+</svg>

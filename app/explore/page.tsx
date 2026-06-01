@@ -51,12 +51,7 @@ export default async function ExplorePage() {
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-7 h-7 bg-green-500 rounded-lg flex items-center justify-center">
-                <span className="text-xs font-bold text-white">RD</span>
-              </div>
-              <span className="font-bold text-white tracking-tight">
-                Repo Diary
-              </span>
+              <Image src="/logo.svg" alt="RepoDiary" width={130} height={32} className="h-7 w-auto" priority />
             </Link>
             <Link href="/explore" className="text-sm font-semibold text-green-400">
               Explore

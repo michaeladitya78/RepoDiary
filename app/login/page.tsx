@@ -3,6 +3,7 @@
 import { createClient } from "@/lib/supabase/client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function LoginPage() {
   const [loading, setLoading] = useState(false);
@@ -32,11 +33,8 @@ export default function LoginPage() {
 
       <div className="w-full max-w-sm">
         {/* Logo */}
-        <div className="flex items-center justify-center gap-2 mb-10">
-          <div className="w-9 h-9 bg-green-500 rounded-xl flex items-center justify-center">
-            <span className="text-sm font-bold text-white">RD</span>
-          </div>
-          <span className="font-bold text-white text-xl tracking-tight">Repo Diary</span>
+        <div className="flex items-center justify-center mb-10">
+          <Image src="/logo.svg" alt="RepoDiary" width={160} height={40} className="h-10 w-auto" priority />
         </div>
 
         <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 shadow-xl">

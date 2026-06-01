@@ -77,10 +77,7 @@ export default async function LandingPage() {
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-7 h-7 bg-green-500 rounded-lg flex items-center justify-center">
-                <span className="text-xs font-bold text-white">RD</span>
-              </div>
-              <span className="font-bold text-white text-lg tracking-tight">Repo Diary</span>
+              <Image src="/logo.svg" alt="RepoDiary" width={140} height={36} className="h-8 w-auto" priority />
             </Link>
             <Link
               href="/explore"
@@ -308,7 +305,10 @@ export default async function LandingPage() {
 
       {/* Footer */}
       <footer className="border-t border-slate-800/60 py-8 px-4 text-center text-slate-500 text-sm">
-        <p>Built for builders at Kalvium, NIT Patna, and colleges across India 🇮🇳</p>
+        <div className="flex flex-col items-center gap-3">
+          <Image src="/logo.svg" alt="RepoDiary" width={120} height={32} className="h-6 w-auto opacity-60" />
+          <p>Built For Lazy Developers</p>
+        </div>
       </footer>
     </main>
   );
