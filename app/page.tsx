@@ -1,8 +1,9 @@
 /* eslint-disable */
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/image"; // kept for avatar images in feed
 import { createClient } from "@/lib/supabase/server";
 import { Entry } from "@/types";
+import ProductHuntEmbed from "@/components/ProductHuntEmbed";
 
 const FAKE_ENTRIES = [
   {
@@ -71,13 +72,17 @@ export default async function LandingPage() {
   });
 
   return (
-    <main className="min-h-screen bg-[#0f172a]">
+    <main className="min-h-screen bg-[#0d1117]">
       {/* Nav */}
       <nav className="border-b border-slate-800/60 px-4 py-4">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center gap-2">
-              <Image src="/logo.svg" alt="RepoDiary" width={140} height={36} className="h-8 w-auto" priority />
+            <Link href="/">
+              <img
+                src="/logo-dark.png"
+                alt="theRepoDiary"
+                style={{ height: '32px', width: 'auto', objectFit: 'contain' }}
+              />
             </Link>
             <Link
               href="/explore"
@@ -96,7 +101,7 @@ export default async function LandingPage() {
       </nav>
 
       {/* Hero with Navy-to-Slate Gradient background */}
-      <section className="max-w-5xl mx-auto px-4 pt-20 pb-16 text-center bg-gradient-to-b from-[#0f172a] to-[#1e293b]/30 rounded-3xl mb-12 border border-slate-800/20">
+      <section className="max-w-5xl mx-auto px-4 pt-20 pb-16 text-center bg-gradient-to-b from-[#0d1117] to-[#161b22]/30 rounded-3xl mb-12 border border-slate-800/20">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-1.5 mb-8 animate-fade-in">
           <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
@@ -128,6 +133,24 @@ export default async function LandingPage() {
             </svg>
             Start logging with GitHub →
           </Link>
+        </div>
+
+        <div className="flex flex-col items-center justify-center mb-8 opacity-0 animate-fade-up delay-500">
+          <p className="text-sm text-slate-500 mt-4">Featured on</p>
+          <div className="mt-2">
+            <a 
+              href="https://www.producthunt.com/products/repo-diary?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-repo-diary" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img 
+                alt="Repo Diary - Your GitHub story, written daily | Product Hunt" 
+                width="250" 
+                height="54" 
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1162889&theme=dark&t=1780531238121"
+              />
+            </a>
+          </div>
         </div>
 
         {/* Profile URL preview */}
@@ -303,11 +326,33 @@ export default async function LandingPage() {
         </div>
       </section>
 
+      <ProductHuntEmbed />
+
       {/* Footer */}
-      <footer className="border-t border-slate-800/60 py-8 px-4 text-center text-slate-500 text-sm">
-        <div className="flex flex-col items-center gap-3">
-          <Image src="/logo.svg" alt="RepoDiary" width={120} height={32} className="h-6 w-auto opacity-60" />
-          <p>Built For Lazy Developers</p>
+      <footer className="border-t border-slate-800/60 py-8 px-4 text-slate-500 text-sm">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col items-center sm:items-start gap-1">
+            <img
+              src="/logo-dark.png"
+              alt="theRepoDiary"
+              style={{ height: '24px', width: 'auto', objectFit: 'contain', opacity: 0.6 }}
+            />
+            <p className="mt-1">Built For Lazy Developers</p>
+          </div>
+          <div>
+            <a 
+              href="https://www.producthunt.com/products/repo-diary?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-repo-diary" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img 
+                alt="Repo Diary - Your GitHub story, written daily | Product Hunt" 
+                width="250" 
+                height="54" 
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1162889&theme=dark&t=1780531238121"
+              />
+            </a>
+          </div>
         </div>
       </footer>
     </main>

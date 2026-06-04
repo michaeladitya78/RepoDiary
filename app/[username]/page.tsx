@@ -40,10 +40,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : undefined;
 
   return {
-    title: `${displayName} — Repo Diary`,
-    description: profile.bio || `${displayName}'s repo diary on Repo Diary. Follow their engineering journey.`,
+    title: `${displayName} — theRepoDiary`,
+    description: profile.bio || `${displayName}'s repo diary on theRepoDiary. Follow their engineering journey.`,
     openGraph: {
-      title: `${displayName} — Repo Diary`,
+      title: `${displayName} — theRepoDiary`,
       description: profile.bio || `${displayName}'s public repo diary.`,
       url: `${appUrl}/${username}`,
       images: ogImage ? [{ url: ogImage, width: 1200, height: 630 }] : [],
@@ -162,12 +162,16 @@ export default async function ProfilePage({ params }: PageProps) {
   const { currentStreak, longestStreak, totalLogs } = calculateStreakStats(allEntries);
 
   return (
-    <main className="min-h-screen bg-[#0f172a]">
+    <main className="min-h-screen bg-[#0d1117]">
         {/* Nav */}
         <nav className="border-b border-slate-800/60 px-4 py-4">
           <div className="max-w-2xl mx-auto flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <Image src="/logo.svg" alt="RepoDiary" width={130} height={32} className="h-7 w-auto" priority />
+            <Link href="/">
+              <img
+                src="/logo-dark.png"
+                alt="theRepoDiary"
+                style={{ height: '28px', width: 'auto', objectFit: 'contain' }}
+              />
             </Link>
             <Link
               href="/login"

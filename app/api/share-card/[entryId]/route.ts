@@ -52,7 +52,7 @@ export async function GET(
         style: {
           width: '1200px',
           height: '630px',
-          backgroundColor: '#0f172a',
+          backgroundColor: '#0d1117',
           display: 'flex',
           flexDirection: 'column',
           padding: '60px',
@@ -73,7 +73,7 @@ export async function GET(
                     style: { display: 'flex', alignItems: 'center', gap: '12px' },
                     children: [
                       { type: 'div', props: { style: { width: '36px', height: '36px', backgroundColor: '#22c55e', borderRadius: '8px' }, children: [] } },
-                      { type: 'span', props: { style: { color: '#ffffff', fontSize: '28px', fontWeight: '700', letterSpacing: '-0.5px' }, children: 'Repo Diary' } },
+                      { type: 'span', props: { style: { color: '#ffffff', fontSize: '28px', fontWeight: '700', letterSpacing: '-0.5px' }, children: 'theRepoDiary' } },
                     ],
                   },
                 },

@@ -45,13 +45,17 @@ export default async function ExplorePage() {
   ).sort();
 
   return (
-    <main className="min-h-screen bg-[#0f172a]">
+    <main className="min-h-screen bg-[#0d1117]">
       {/* Nav */}
-      <nav className="border-b border-slate-800/60 px-4 py-4 sticky top-0 bg-[#0f172a]/80 backdrop-blur-md z-50">
+      <nav className="border-b border-slate-800/60 px-4 py-4 sticky top-0 bg-[#0d1117]/80 backdrop-blur-md z-50">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center gap-2">
-              <Image src="/logo.svg" alt="RepoDiary" width={130} height={32} className="h-7 w-auto" priority />
+            <Link href="/">
+              <img
+                src="/logo-dark.png"
+                alt="theRepoDiary"
+                style={{ height: '28px', width: 'auto', objectFit: 'contain' }}
+              />
             </Link>
             <Link href="/explore" className="text-sm font-semibold text-green-400">
               Explore

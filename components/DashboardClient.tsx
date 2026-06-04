@@ -81,12 +81,16 @@ export default function DashboardClient({ profile }: { profile: Profile }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#0f172a]">
+    <div className="min-h-screen bg-[#0d1117]">
       {/* Top bar */}
       <nav className="border-b border-slate-800/60 px-4 py-3.5">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo.svg" alt="RepoDiary" width={130} height={32} className="h-7 w-auto" priority />
+          <Link href="/">
+            <img
+              src="/logo-dark.png"
+              alt="theRepoDiary"
+              style={{ height: '28px', width: 'auto', objectFit: 'contain' }}
+            />
           </Link>
 
           <div className="flex items-center gap-3">

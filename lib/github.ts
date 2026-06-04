@@ -2,7 +2,7 @@ import { Octokit } from '@octokit/rest'
 import { Entry } from '@/types'
 
 function formatMarkdown(entry: Entry, date: string): string {
-  return `Repo Diary — ${date}
+  return `theRepoDiary — ${date}
 
  🔨 What I built
 ${entry.built}
@@ -14,7 +14,7 @@ ${entry.learned}
 ${entry.next}
 
 ---
-*Logged via [Repo Diary](https://repodiary.com)*
+*Logged via [theRepoDiary](https://repodiary.com)*
 `
 }
 
@@ -80,7 +80,7 @@ export async function commitEntryToGitHub(
       owner,
       repo,
       path: filePath,
-      message: `📝 Repo Diary ${date}`,
+      message: `📝 theRepoDiary ${date}`,
       content: contentBase64,
       sha: existingSha,
     })

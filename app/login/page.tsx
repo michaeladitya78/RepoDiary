@@ -3,7 +3,6 @@
 import { createClient } from "@/lib/supabase/client";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function LoginPage() {
   const [loading, setLoading] = useState(false);
@@ -22,7 +21,7 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#0f172a] flex flex-col items-center justify-center px-4">
+    <main className="min-h-screen bg-[#0d1117] flex flex-col items-center justify-center px-4">
       {/* Back */}
       <Link
         href="/"
@@ -34,7 +33,11 @@ export default function LoginPage() {
       <div className="w-full max-w-sm">
         {/* Logo */}
         <div className="flex items-center justify-center mb-10">
-          <Image src="/logo.svg" alt="RepoDiary" width={160} height={40} className="h-10 w-auto" priority />
+          <img
+            src="/logo-dark.png"
+            alt="theRepoDiary"
+            style={{ height: '40px', width: 'auto', objectFit: 'contain', marginBottom: '0' }}
+          />
         </div>
 
         <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 shadow-xl">
